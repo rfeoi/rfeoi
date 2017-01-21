@@ -1,0 +1,2 @@
+To use MyFileReader just create a new instance of MyFileReader.
+To get a Hashmap with all paths use getConfig()
