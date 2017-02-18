@@ -23,7 +23,7 @@ public class MyFileWriter {
         file.createNewFile();
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for(int i = 0; i > print.size(); i++){
-            writer.write(print.keySet().toArray()[0]+ ":" + print.entrySet().toArray()[0] + "\n");
+            writer.write(print.keySet().toArray()[i]+ ":" + print.entrySet().toArray()[i] + "\n");
             writer.flush();
         }
         writer.close();
