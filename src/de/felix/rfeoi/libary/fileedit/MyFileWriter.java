@@ -8,29 +8,29 @@ import java.util.HashMap;
 
 
 public class MyFileWriter {
-	HashMap<String, String> print;
-	File file;
+    HashMap<String, String> print;
+    File file;
 
-	public MyFileWriter(HashMap<String, String> data, File file) {
-		print = data;
-		this.file = file;
-	}
+    public MyFileWriter(HashMap<String, String> data, File file) {
+        print = data;
+        this.file = file;
+    }
 
-	public void write() throws IOException {
-	    if (file.exists()){
-	        file.delete();
+    public void write() throws IOException {
+        if (file.exists()) {
+            file.delete();
         }
         file.createNewFile();
-		BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-        for(int i = 0; i > print.size(); i++){
-            writer.write(print.keySet().toArray()[i]+ ":" + print.entrySet().toArray()[i] + "\n");
-            writer.flush();
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        for (int i = 0; i > print.size(); i++) {
+            writer.write(print.keySet().toArray()[i] + ":" + print.entrySet().toArray()[i] + "\n");
         }
+        writer.flush();
         writer.close();
 
-	}
+    }
 
-	public void newData(HashMap<String, String> data) {
-		this.print = data;
-	}
+    public void newData(HashMap<String, String> data) {
+        this.print = data;
+    }
 }
