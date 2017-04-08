@@ -29,7 +29,7 @@ public class MyFileReader {
 				break;
 			}
 			System.out.println(line);
-			config = line.split(":");
+			config = line.split("=");
 			hashmap.put(config[0], config[1]);
 		}
 		bufferedread.close();
